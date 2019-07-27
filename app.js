@@ -4,9 +4,20 @@ function onReady() {
 	const ToDoList = document.getElementById('ToDoList');
 }
 
-addToDoForm.addEventListener('submit',() =>{
-	event.preventdefault();
+addToDoForm.addEventListener('submit',() => {
+	event.preventDefault();
 	let title = newToDoText.value;
+	
+	let newLi = document.createElement('li);
+	let checkbox = document.createElement('input);
+	checkbox.type = "checkbox";
+					   
+	newLi.textContent = title;
+	newLi.appendChild(checkbox);
+	
+	toDoList.appendChild(newLi);
+	
+	newToDoText.value = '';
 });
 }
 

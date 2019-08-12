@@ -1,4 +1,4 @@
-function on ready() {
+function onReady() {
 	const addToDoForm = document.getElementById('addToDoForm');
 		
 	let toDos = [];
@@ -7,7 +7,7 @@ function on ready() {
 		const toDoList = document.getElementById('toDoList');
 		
 		toDos.forEach(function(toDo){
-			const newLi document.createElement('li');
+			const newLi = document.createElement('li');
 			const checkbox = document.createElement('input');
 			checkbox.type = "checkbox";
 
@@ -20,7 +20,7 @@ function on ready() {
 }
 	
 	function createNewToDo() {
-		const newToDoText = document.getElementByID('newToDoText');
+		const newToDoText = document.getElementById('newToDoText');
 		toDos.push({
 			title: newToDoText.value,
 			complete: false
